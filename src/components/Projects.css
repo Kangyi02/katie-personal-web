@@ -145,6 +145,8 @@
 
 /* ── Video ── */
 .project-video-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
   margin-top: 0.5rem;
   border-radius: 14px;
   overflow: hidden;
@@ -227,4 +229,13 @@
   .project-title {
     font-size: 1.25rem;
   }
+}
+
+.project-video-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
