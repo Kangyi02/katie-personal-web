@@ -15,7 +15,7 @@ const projects = [
       'Produced full project documentation: Specifications, Design & User Manuals',
       'Managed source control and code reviews via GitHub',
     ],
-    video: '/issue tracking.mov',
+    videoEmbed: 'https://drive.google.com/file/d/1vrEl3TF-zMQagXLgK_JH-wLDI4Rb9H9d/preview',
     link: 'https://github.com/Kangyi02',
   },
   {
@@ -32,7 +32,7 @@ const projects = [
       'Full CRUD: report, view, edit, and update criminal status',
       'Responsive Bootstrap layout optimised for desktop and mobile',
     ],
-    video: 'demo2.mov', // add your video path here e.g. '/baddie-report.mov'
+    videoEmbed: 'https://drive.google.com/file/d/1DzlB_YkqdSKG5TBu_TuBHyRly_FlroIY/preview', // add your video path here e.g. '/baddie-report.mov'
     link: 'https://github.com/Kangyi02',
   },
   {
@@ -50,7 +50,7 @@ const projects = [
       'Collaborated on skin tone scale research to inform accurate, bias-aware conversion logic',
       'Contributed to UI testing and debugging across the full application pipeline',
     ],
-    video: '/skintone.mov',
+    videoEmbed: 'https://drive.google.com/file/d/1w1Jngxkr8Qy3bYDanvNiIQ9y-NQcQWNz/preview',
     link: 'https://github.com/Kangyi02',
   }
 ]
