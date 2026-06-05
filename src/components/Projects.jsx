@@ -32,13 +32,13 @@ const projects = [
       'Full CRUD: report, view, edit, and update criminal status',
       'Responsive Bootstrap layout optimised for desktop and mobile',
     ],
-    videoEmbed: 'https://drive.google.com/file/d/1DzlB_YkqdSKG5TBu_TuBHyRly_FlroIY/preview', // add your video path here e.g. '/baddie-report.mov'
+    videoEmbed: 'https://drive.google.com/file/d/1DzlB_YkqdSKG5TBu_TuBHyRly_FlroIY/preview',
     link: 'https://github.com/Kangyi02',
   },
   {
     title: 'Skin Tone AI Library & GUI',
     year: '2025',
-    org: 'SFU · CMPT 340',
+    org: 'SFU \u00b7 CMPT 340',
     status: 'Academic',
     description:
       'A Python-based AI library for automatic skin tone extraction, cross-scale conversion, and skin tone transformation for data augmentation. Built to tackle dataset bias in medical AI — the system segments skin regions from images, calculates ITA values, and converts between the Fitzpatrick, Monk, and ITA skin tone scales. Includes an interactive Tkinter GUI and a batch conversion script.',
@@ -52,24 +52,20 @@ const projects = [
     ],
     videoEmbed: 'https://drive.google.com/file/d/1w1Jngxkr8Qy3bYDanvNiIQ9y-NQcQWNz/preview',
     link: 'https://github.com/Kangyi02',
-  }
+  },
 ]
 
-function VideoPlayer({ src, title }) {
-  if (src) {
+function VideoPlayer({ embedUrl, title }) {
+  if (embedUrl) {
     return (
       <div className="project-video-wrap">
-        <video
-          controls
-          playsInline
-          preload="metadata"
-          className="project-video"
-          aria-label={`${title} demo video`}
-        >
-          <source src={src} type="video/mp4" />
-          <source src={src} type="video/quicktime" />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          src={embedUrl}
+          className="project-video-iframe"
+          allow="autoplay"
+          allowFullScreen
+          title={`${title} demo video`}
+        />
       </div>
     )
   }
@@ -83,7 +79,6 @@ function VideoPlayer({ src, title }) {
           </svg>
         </div>
         <p className="placeholder-text">Demo video coming soon</p>
-        <span className="placeholder-hint">Drop your .mov or .mp4 in the <code>public/</code> folder and set the <code>video</code> path above</span>
       </div>
     </div>
   )
@@ -100,7 +95,6 @@ export default function Projects() {
           {projects.map((p, i) => (
             <article className="project-card" key={i}>
 
-              {/* ── Header row ── */}
               <div className="project-header">
                 <div className="project-meta">
                   <span className="project-year">{p.year} · {p.org}</span>
@@ -114,10 +108,7 @@ export default function Projects() {
                 </a>
               </div>
 
-              {/* ── Title ── */}
               <h3 className="project-title">{p.title}</h3>
-
-              {/* ── Description + highlights ── */}
               <p className="project-desc">{p.description}</p>
 
               <div className="project-highlights-block">
@@ -127,13 +118,11 @@ export default function Projects() {
                 </ul>
               </div>
 
-              {/* ── Tech tags ── */}
               <div className="project-tech">
                 {p.tech.map(t => <span className="tech-tag" key={t}>{t}</span>)}
               </div>
 
-              {/* ── Video below ── */}
-              <VideoPlayer src={p.video} title={p.title} />
+              <VideoPlayer embedUrl={p.videoEmbed} title={p.title} />
 
             </article>
           ))}
