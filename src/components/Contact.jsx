@@ -54,13 +54,8 @@ export default function Contact() {
           <div className="contact-card">
             <div className="contact-card-deco">🌿</div>
             <p className="contact-card-quote">
-              "The best way to predict the future is to invent it."
+              Always laugh, always appreciate. 😆🤗
             </p>
-            <p className="contact-card-attr">— Alan Kay</p>
-            <div className="contact-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Burnaby, BC, Canada
-            </div>
           </div>
         </div>
       </div>
